@@ -34,6 +34,5 @@ app.listen(4000,function(erro){
 })
 
 // localhost:4000/produtos
-// localhost:4000/cadastro - resposta: Produto criado
-// localhost:4000/cadastro/bola - resposta: produto bola criado!
-// localhost:4000/consulta?cpf=107.712.469.43
+//localhost:4000/cadastro - resposta: Produto criado
+// localhost:4000/cadastro/bola - resposta: produto boa criado!

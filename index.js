@@ -20,8 +20,15 @@ app.get("/cadastro/:nome?",function(req,res){
 })
 // add rota consulta utilizando Query Params
 app.get("/consulta/", function(req,res){
+    // req ---> dados enviados pelo cliente
     var cpf = req.query["cpf"]
-    res.send("retorno consulta: cpf = "+ cpf)
+
+    //res - resposta enviada pelo servidos de volta ao cliente
+    if(cpf){
+        res.send("retorno consulta: cpf = "+ cpf)
+    }else{
+        res.send("CPF NÃO FORNECIDO")
+    }
 })
 
 

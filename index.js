@@ -18,6 +18,12 @@ app.get("/cadastro/:nome?",function(req,res){
         res.send("Produto criado!")
     }
 })
+// add rota consulta utilizando Query Params
+app.get("/consulta/", function(req,res){
+    var cpf = req.query["cpf"]
+    res.send("retorno consulta: cpf = "+ cpf)
+})
+
 
 app.listen(4000,function(erro){
     if(erro){
@@ -29,4 +35,4 @@ app.listen(4000,function(erro){
 
 // localhost:4000/produtos
 //localhost:4000/cadastro - resposta: Produto criado
-// localhost:4000/cadastro/bola - resposta: produto boa criado!
+// localhost:4000/cadastro/bola - resposta: produto bola criado!
